@@ -284,8 +284,10 @@ class InputSpace(object):
 
             if param['type'] == 'float':
                 format_str = '%s%-12.12s  %-9.9s  %-12f'
-            else:
+            elif param['type'] == 'int':
                 format_str = '%s%-12.12s  %-9.9s  %-12d'
+            else:
+                format_str = '%s%-12.12s  %-9.9s  %-12s'
 
             for i in xrange(len(param['values'])):
                 if i == 0:
